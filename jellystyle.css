@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #002d4f; /* Deep ocean blue */
+}
+
+.jellyfish-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.jellyfish {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    animation: moveJellyfish 10s linear infinite;
+}
+
+@keyframes moveJellyfish {
+    0% {
+        transform: translateX(-100px) translateY(50px);
+    }
+    50% {
+        transform: translateX(100vw) translateY(calc(50vh - 75px));
+    }
+    100% {
+        transform: translateX(-100px) translateY(50px);
+    }
+}
